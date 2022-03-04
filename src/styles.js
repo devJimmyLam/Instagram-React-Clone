@@ -79,26 +79,28 @@ export const useLoginPageStyles = makeStyles({
   card: {
     maxWidth: 348,
     padding: "16px 40px",
-    marginBottom: 10
+    marginBottom: 20
   },
   section: {
     display: "grid",
     placeItems: "center",
-    height: "100vh"
+    height: "100vh",
+    backgroundColor: "#F9F9F9",
   },
   cardHeader: {
     backgroundImage: `url(${IconSheet})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "-98px 0",
-    height: 51,
-    width: 175,
+    height: 20,
+    width: 150,
     margin: "22px auto 12px"
   },
   textField: {
     marginBottom: 6
   },
   button: {
-    margin: "8px 0px"
+    margin: "8px 0px",
+    textTransform: "none"
   },
   typography: {
     margin: "10px 0px"
@@ -114,6 +116,13 @@ export const useLoginPageStyles = makeStyles({
     justifySelf: "stretch",
     height: 1,
     background: "#e6e6e6"
+  },
+  signUpButton: {
+    textTransform:"none",
+  },
+  facebookLoginButton: {
+    textTransform:"none",
+    color: "black"
   },
   facebookIcon: {
     height: 16,
