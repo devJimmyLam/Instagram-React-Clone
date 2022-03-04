@@ -62,15 +62,15 @@ function LoginPage() {
             </div>
             <LoginWithFacebook color="secondary" iconColor="blue" />
             <Button fullWidth color="primary">
-              <Typography variant="caption">Forgot password?</Typography>
+              <Typography variant="caption" style={{ textTransform: 'none' }}>Forgot password?</Typography>
             </Button>
           </Card>
           <Card className={classes.signUpCard}>
             <Typography align="right" variant="body2">
               Don't have an account?
             </Typography>
-            <Link to="/accounts/emailsignup">
-              <Button color="primary" className={classes.signUpButton} style={{textDecoration: "none"}}>
+            <Link to="/accounts/emailsignup" style={{ textDecoration: 'none' }}>
+              <Button color="primary" className={classes.signUpButton}>
                 Sign up
               </Button>
             </Link>
@@ -87,7 +87,7 @@ export function LoginWithFacebook({ color, iconColor, variant }) {
     iconColor === "blue" ? FacebookIconBlue : FacebookIconWhite;
 
   return (
-    <Button fullWidth color="primary" variant={variant} className={classes.facebookLoginButton}>
+    <Button fullWidth color={color} variant={variant} className={classes.facebookLoginButton}>
       <img
         src={facebookIcon}
         alt="facebook icon"

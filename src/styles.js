@@ -84,7 +84,7 @@ export const useLoginPageStyles = makeStyles({
   section: {
     display: "grid",
     placeItems: "center",
-    height: "150vh",
+    height: "100vh",
     backgroundColor: "#F9F9F9",
   },
   cardHeader: {
@@ -117,17 +117,17 @@ export const useLoginPageStyles = makeStyles({
     height: 1,
     background: "#e6e6e6"
   },
-  facebookIcon: {
-    height: 16,
-    width: 16,
-    marginRight: 8
-  },
   signUpButton: {
     textTransform:"none",
   },
   facebookLoginButton: {
     textTransform:"none",
     color: "black"
+  },
+  facebookIcon: {
+    height: 16,
+    width: 16,
+    marginRight: 8
   }
 });
 
