@@ -101,7 +101,6 @@ export const useLoginPageStyles = makeStyles({
   },
   button: {
     margin: "8px 0px",
-    textTransform: "none"
   },
   typography: {
     margin: "10px 0px"
@@ -123,7 +122,6 @@ export const useLoginPageStyles = makeStyles({
   },
   facebookLoginButton: {
     textTransform:"none",
-    color: "black"
   },
   facebookIcon: {
     height: 16,
@@ -134,19 +132,25 @@ export const useLoginPageStyles = makeStyles({
 
 // SignUp page: /pages/signup.js
 export const useSignUpPageStyles = makeStyles({
-  card: { maxWidth: 348, padding: "16px 40px", marginBottom: 10 },
+  card: { 
+    maxWidth: 348, 
+    padding: "16px 40px", 
+    marginBottom: 10 
+  },
   section: {
     display: "grid",
     placeItems: "center",
-    height: "100vh"
+    height: "100vh",
+    backgroundColor: "#F9F9F9",
   },
   cardHeader: {
     backgroundImage: `url(${IconSheet})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "-98px 0",
-    height: 51,
-    width: 175,
-    margin: "22px auto 12px"
+    backgroundPosition: "-6px 0",
+    height: 20,
+    width: 150,
+    margin: "22px auto 12px",
+    padding: 20,
   },
   cardHeaderSubHeader: {
     textAlign: "center",
@@ -159,7 +163,7 @@ export const useSignUpPageStyles = makeStyles({
     marginBottom: 6
   },
   button: {
-    margin: "10px 0px 16px 0px"
+    margin: "10px 0px 16px 0px",
   },
   orContainer: {
     margin: "10px 0px",
@@ -182,7 +186,8 @@ export const useSignUpPageStyles = makeStyles({
     gridTemplateColumns: "3fr 2fr"
   },
   loginButton: {
-    justifySelf: "start"
+    justifySelf: "start",
+    textTransform: "none !important",
   }
 });
 

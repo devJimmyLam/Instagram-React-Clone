@@ -23,7 +23,7 @@ function Logo(){
 		<div className={classes.logoContainer}>
 			<Link to="/">
 				<div className={classes.logoWrapper}>
-					<img src={logo} alt="Instagram" className={classes.logo} />
+					<img src={logo} alt="PhotoGram" className={classes.logo} />
 				</div>
 			
 			</Link>
