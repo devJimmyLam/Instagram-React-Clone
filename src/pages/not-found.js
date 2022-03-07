@@ -23,7 +23,7 @@ function NotFoundPage() {
 							color="primary"
 							component="span"
 						>
-							Go to back to Instagram.
+							Go to back to PhotoGram.
 						</Typography>
 					</Link>
 				</Typography>

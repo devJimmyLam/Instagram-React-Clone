@@ -1,5 +1,5 @@
 import { makeStyles, withStyles, Tooltip } from "@material-ui/core";
-import IconSheet from "./images/icon-sheet.png";
+import IconSheet from "./images/logo2.png";
 import IconSheet2 from "./images/icon-sheet-2.png";
 
 /* Feed page: /pages/feed.js */
@@ -90,10 +90,11 @@ export const useLoginPageStyles = makeStyles({
   cardHeader: {
     backgroundImage: `url(${IconSheet})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "-98px 0",
+    backgroundPosition: "-6px 0",
     height: 20,
     width: 150,
-    margin: "22px auto 12px"
+    margin: "22px auto 12px",
+    padding: 20,
   },
   textField: {
     marginBottom: 6
