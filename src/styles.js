@@ -597,15 +597,17 @@ export const useFeedPostStyles = makeStyles(theme => ({
     display: "grid",
     gridAutoFlow: "column",
     gridTemplateColumns: "auto minmax(auto, 56px)",
-    padding: "0px 0px 0px 16px !important"
+    padding: "0px 0px 0px 16px !important" 
   },
   commentButton: {
     width: "48px !important",
-    padding: "unset"
+    padding: "unset",
+    textTransform: 'none'
   },
   moreButton: {
     color: "#999 !important",
     padding: "0px !important",
+    textTransform: 'none',
     "&:hover": {
       background: "transparent !important"
     }
@@ -1442,7 +1444,7 @@ export const useProfilePageStyles = makeStyles(theme => {
     },
     unfollowButton: {
       color: `${theme.palette.error.main} !important`,
-      padding: "12px 8px !important"
+      padding: "12px 8px !important",
     },
     unfollowDialogText: {
       padding: "16px 16px 32px !important"
