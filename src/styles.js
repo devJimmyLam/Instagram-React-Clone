@@ -223,6 +223,7 @@ export const useNavbarStyles = makeStyles(theme => ({
   },
   logo: {
     marginTop: 7,
+    marginBottom: 7,
     maxHeight: "100%",
     maxWidth: "100%",
     objectFit: "contain"
