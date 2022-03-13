@@ -1,16 +1,16 @@
 import React, {useState} from "react";
 import { useNavbarStyles } from "../../styles";
-import { Link, useNavigate, useLocation} from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 import logo from'../../images/logo2.png';
 import {
 	AppBar,
 	Hidden,
 	InputBase,
 	Avatar,
-	Fade,
-	Grid,
-	Typography,
-	Zoom
+	// Fade,
+	// Grid,
+	// Typography,
+	// Zoom
 } from "@material-ui/core";
 import {
 	LoadingIcon,
@@ -22,14 +22,14 @@ import {
 	HomeIcon,
 	HomeActiveIcon,
 } from "../../icons";
-import { defaultCurrentUser, getDefaultUser } from "../../data";
+import { defaultCurrentUser } from "../../data";
 
 
 function Navbar({minimalNavbar}) {
 	const classes = useNavbarStyles();
-	// const navigate = useNavigate();
-	const location = useLocation();
-	const path = location.pathname;
+	
+	const history = useHistory();
+	const path = history.location.pathname;
 	console.log("this is path location:" + path)
 
 	return (
