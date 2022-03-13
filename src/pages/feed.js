@@ -1,5 +1,4 @@
-import React from "react";
-import {useState} from "react";
+import React, {useState} from "react";
 import { useFeedPageStyles } from "../styles";
 import Layout from "../components/shared/Layout";
 import UserCard from "../components/shared/UserCard";
