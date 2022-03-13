@@ -1,19 +1,36 @@
 import React, {useState} from "react";
 import { useNavbarStyles } from "../../styles";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation} from 'react-router-dom';
 import logo from'../../images/logo2.png';
 import {
 	AppBar,
 	Hidden,
 	InputBase,
+	Avatar,
+	Fade,
+	Grid,
+	Typography,
+	Zoom
 } from "@material-ui/core";
 import {
 	LoadingIcon,
-
+	AddIcon,
+	LikeIcon,
+	LikeActiveIcon,
+	ExploreIcon,
+	ExploreActiveIcon,
+	HomeIcon,
+	HomeActiveIcon,
 } from "../../icons";
+import { defaultCurrentUser, getDefaultUser } from "../../data";
+
 
 function Navbar({minimalNavbar}) {
 	const classes = useNavbarStyles();
+	// const navigate = useNavigate();
+	const location = useLocation();
+	const path = location.pathname;
+	console.log("this is path location:" + path)
 
 	return (
 		<AppBar className={classes.appBar}>
@@ -22,7 +39,7 @@ function Navbar({minimalNavbar}) {
 				{!minimalNavbar && (
 					<>
 						<Search />
-						<Links />
+						<Links to={path}/>
 					</>
 				)}
 			</section>
@@ -56,7 +73,7 @@ function Search(){
 	};
 
 	return(
-		<Hidden only="xs">
+		<Hidden xsDown>
 			<InputBase 
 				className={classes.input}
 				onChange={event => setQuery (event.target.value)}
@@ -75,10 +92,39 @@ function Search(){
 	)
 }
 
-function Links(){
+function Links({path}){
+	const classes = useNavbarStyles()
+	const [showList, setList] = useState(false)
+	
+	function handleToggleList() {
+		setList(prev => !prev);
+	}
+
 	return(
-		<div>
-			Links
+		<div className={classes.linksContainer}>
+			<div className={classes.linksWrapper}>
+				<Hidden xsDown>
+					<AddIcon/>
+				</Hidden>
+				<Link to="/">{path === "/" ? <HomeActiveIcon /> : <HomeIcon />}</Link>
+				<Link to="/explore">{path === "/explore" ? <ExploreActiveIcon /> : <ExploreIcon />} </Link>
+				<div className={classes.notifications} onClick={handleToggleList}>
+					{showList ? <LikeActiveIcon /> : <LikeIcon />}
+				</div>
+				<Link to={`/${defaultCurrentUser.username}`}>
+					<div
+					className={
+						path === `/${defaultCurrentUser.username}`
+						? classes.profileActive
+						: ""
+					}
+					></div>
+					<Avatar 
+						src={defaultCurrentUser.profile_image}
+						className={classes.profileImage}
+					/>
+				</Link>
+			</div>
 		</div>
 	)
 }
