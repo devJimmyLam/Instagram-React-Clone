@@ -69,9 +69,9 @@ function LoginPage() {
             <Typography align="right" variant="body2">
               Don't have an account?
             </Typography>
-            <Link to="/accounts/emailsignup" style={{ textDecoration: 'none' }}>
+            <Link to="/accounts/emailsignup" style={{ textDecoration: 'none'}}>
               <Button color="primary" className={classes.signUpButton}>
-                Sign up
+                <span style={{textTransform: 'none'}}>Sign up</span>
               </Button>
             </Link>
           </Card>
