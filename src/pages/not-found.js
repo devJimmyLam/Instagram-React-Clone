@@ -6,6 +6,7 @@ import {Link } from 'react-router-dom';
 function NotFoundPage() {
 	return (
 		<Layout 
+			minimalNavbar
 			title="Page Not Found"
 			marginTop={120}
 			>
@@ -32,5 +33,7 @@ function NotFoundPage() {
 		</Layout>
 	)
 }
+
+
 
 export default NotFoundPage;

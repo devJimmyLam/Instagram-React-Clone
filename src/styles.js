@@ -1,6 +1,7 @@
 import { makeStyles, withStyles, Tooltip } from "@material-ui/core";
-import IconSheet from "./images/logo2.png";
+import IconSheet from "./images/icon-sheet.png";
 import IconSheet2 from "./images/icon-sheet-2.png";
+import Logo2 from "./images/logo2.png";
 
 /* Feed page: /pages/feed.js */
 export const useFeedPageStyles = makeStyles(theme => ({
@@ -88,7 +89,7 @@ export const useLoginPageStyles = makeStyles({
     backgroundColor: "#F9F9F9",
   },
   cardHeader: {
-    backgroundImage: `url(${IconSheet})`,
+    backgroundImage: `url(${Logo2})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "-6px 0",
     height: 20,
@@ -144,7 +145,7 @@ export const useSignUpPageStyles = makeStyles({
     backgroundColor: "#F9F9F9",
   },
   cardHeader: {
-    backgroundImage: `url(${IconSheet})`,
+    backgroundImage: `url(${Logo2})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "-6px 0",
     height: 20,
