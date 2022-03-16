@@ -7,10 +7,10 @@ import {
 	Hidden,
 	InputBase,
 	Avatar,
-	// Fade,
-	// Grid,
-	// Typography,
-	// Zoom
+	Fade,
+	Grid,
+	Typography,
+	Zoom
 } from "@material-ui/core";
 import {
 	LoadingIcon,
@@ -27,10 +27,9 @@ import { defaultCurrentUser } from "../../data";
 
 function Navbar({minimalNavbar}) {
 	const classes = useNavbarStyles();
-	
+
 	const history = useHistory();
 	const path = history.location.pathname;
-	console.log("this is path location:" + path)
 
 	return (
 		<AppBar className={classes.appBar}>
@@ -106,8 +105,12 @@ function Links({path}){
 				<Hidden xsDown>
 					<AddIcon/>
 				</Hidden>
-				<Link to="/">{path === "/" ? <HomeActiveIcon /> : <HomeIcon />}</Link>
-				<Link to="/explore">{path === "/explore" ? <ExploreActiveIcon /> : <ExploreIcon />} </Link>
+				<Link to="/">
+					{path ===  "/" ? <HomeActiveIcon/> : <HomeIcon/>}
+				</Link>
+				<Link to="/explore">
+					{path === "/explore" ? <ExploreActiveIcon /> : <ExploreIcon />}
+				</Link>
 				<div className={classes.notifications} onClick={handleToggleList}>
 					{showList ? <LikeActiveIcon /> : <LikeIcon />}
 				</div>
